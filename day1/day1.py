@@ -1,4 +1,5 @@
 # CHATGPT
+import math.abs
 
 # Initialize empty lists to store the columns
 column1 = []
@@ -15,8 +16,8 @@ with open('input.txt', 'r') as file:
         column2.append(float(values[1]))  # Append the second value to column2
 
 # Now you have two lists: column1 and column2
-print(column1)
-print(column2)
+# print(column1)
+# print(column2)
 
 # END CHATGPT
 
@@ -24,6 +25,7 @@ print(column2)
 column1.sort()
 column2.sort()
 
+# need to adjust to subtract by the greater number
 column3 = [a - b for a, b in zip(column1, column2)]
 
 print(sum(column3))
